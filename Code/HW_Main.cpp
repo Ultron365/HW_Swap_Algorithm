@@ -1,22 +1,38 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-// Variable - START
-//	define variables that are global between the two Variable markers
 
-// Variable - END
+#define MAX_ARR_SIZE 10000
 
-// Function/Method Declaration - START
-//	define function/method declaration signatures between the two markers
+int main()
+{
+  
+    int countArray[MAX_ARR_SIZE];
+    char inputString[MAX_ARR_SIZE];
+    int i, j;
 
-// Function/Method Declaration - END
+    cout << "Please enter your array : ";
+    cin >> inputString;
 
-int main() {
-	cout << "Hello World!";
+    for (i = 0; i < MAX_ARR_SIZE; i++)
+    {
+        countArray[i] = 0;
+    }
+
+    for (i = 0; inputString[i]; i++)
+    {
+        countArray[inputString[i]]++;
+    }
+  
+    cout << "Your sorted array is:";
+
+  
+    for (i = 0; i < MAX_ARR_SIZE; i++)
+    {
+        for (j = 0; j < countArray[i]; j++)
+        {
+            printf("%c", i);
+        }
+    }
 }
-
-// Function/Method Definition - START
-//	define function/method declaration signatures between the two markers
-
-// Function/Method Definition - END
